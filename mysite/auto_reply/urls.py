@@ -8,5 +8,5 @@ urlpatterns = [
 #:w    url(r'^$', views.index, name='index'),
 #    url(r'^forms/$', views.index, name='index'),
     url(r'^forms/$', views.question_forms, name='hello_forms'),
-    url(r'^static_site/(?P<path>.*)$',django.views.static.serve, {'document_root': settings.MEDIA_ROOT}),
+#    url(r'^static_site/(?P<path>.*)$',django.views.static.serve, {'document_root': settings.MEDIA_ROOT}),
 ]
