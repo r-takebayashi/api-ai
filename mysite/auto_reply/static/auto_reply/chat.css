@@ -1,0 +1,55 @@
+.chat-box {
+   width: 100%;
+   height: auto;
+   overflow: hidden;
+   margin-bottom: 20px;
+}
+.chat-face {
+   float: left;
+   margin-right: -120px;
+   background: white url("images/routen.png") no-repeat right bottom;
+} 
+
+.chat-face img{
+   border-radius: 30px;
+   border: 1px solid #ccc;
+   box-shadow: 0 0 4px #ddd;
+   background: white url("images/routen.png") no-repeat right bottom;
+}
+
+.chat-area{
+   width: 100%;
+   float: right;
+}
+
+.chat-hukidashi{
+   display: inline-block;
+   padding: 15px 20px;
+   margin-left: 120px;
+   margin-top: 10px;
+   /* border: 1px solid gray;*/
+   border-radius: 10px;
+   position: relative;
+   background-color: #D9F0FF
+}
+
+.chat-fukidashi:after {
+   content: "";
+   position: absolute;
+   top: 50%; left: -10px;
+   margin-top: -10px;
+   display: block;
+   width: 0px;
+   height: 0px;
+   border-style: solid;
+   border-width: 10px 10px 10px 0;
+   border-color: transparent #D9F0FF transparent transparent;
+}
+
+.someone {
+   background-color: #BCF5A9;
+}
+
+.someone:after {
+   border-color: transparent #BCF5A9 transparent transparent;
+}

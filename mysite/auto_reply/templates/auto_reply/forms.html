@@ -1,8 +1,22 @@
-{% extends "base.html" %}
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'auto_reply/chat.css' %}" />
 
 {% block body %}
-  {{ message }}
   <hr>
+  <div align="right">
+    <div class="chat-box">
+<!--      <img src="{{ STATIC_URL }}images/routen.png" alt="my-chat-picture" width="90" height=90" /> -->
+      <img src="{{ MEDIA_URL }}auto_reply/images/routen.png" alt="my-chat-picture" width="90" height=90" />
+    </div>
+    <div class="chat-face">
+    </div>
+    <div class="chat-area">
+      <div class="chat-hukidashi">
+        {{ message }}
+      </div>
+    </div>
+  </div>
   <form method="get" action="">
     {{ form.errors.your_name }}
     <label>{{ form.your_name.label }} {{ form.your_name }}</label><br>
@@ -13,6 +27,6 @@
     {{ form.errors.memo }}
     <label style="vertical-align: top;">{{ form.memo.lable }} {{ form.memo }}</label><br>
 
-    <input type="submit" value="send">
+    <input type="submit" value="Send">
   </form>
 {% endblock %}

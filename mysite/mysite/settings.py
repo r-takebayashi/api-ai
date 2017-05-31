@@ -31,6 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'auto_reply.apps.AutoReplyConfig',
     'polls.apps.PollsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -119,3 +120,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# add by ryo 20170531
+BASE_PATH = os.path.abspath(os.path.split(__file__)[0])
+
+MEDIA_ROOT = os.path.join(BASE_PATH, 'static')
+
+MEIDA_URL = '/static_site/'

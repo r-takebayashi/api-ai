@@ -30,7 +30,7 @@ def question_forms(request):
         'form': form,
         'message': message,
     }
-    return render(request, 'forms.html', d)
+    return render(request, 'auto_reply/forms.html', d)
 
 def answer(request):
     ai = apiai.ApiAI(CLIENT_ACCESS_TOKEN)
